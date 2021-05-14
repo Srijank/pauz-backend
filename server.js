@@ -12,7 +12,6 @@ app.use(helmet());
 app.use(express.json());
 app.use(cors());
 
-console.log(process.env.MONGO_URI)
 
 mongoose
   .connect(process.env.MONGO_URI, {
@@ -22,7 +21,6 @@ mongoose
   })
   .then((res) => console.log("Mongo DB connected!"))
   .catch((err) => {
-    console.log(err)
     console.log("Failed to connect to MongoDB")
   });
 
